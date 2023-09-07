@@ -16,15 +16,17 @@ next.addEventListener("click",(e)=>{
 	for (let i = 0; i < count; i++) {
 		circles[i].classList.add("active");
 	}
-	h1.innerText = count;
+	// h1.innerText = count;
 })
 previous.addEventListener("click",(e)=>{
-	count--;
+	if(count<5){
+		next.removeAttribute("disabled")	
+	}
 	if(count == 1){
 		previous.setAttribute("disabled",true)	
+	}else{
+		count--;
 	}
-	// for (let i = count; i > ; i++) {
-		circles[count].classList.remove("active");
-	// }
-	h1.innerText = count;
+	circles[count].classList.remove("active");
+	// h1.innerText = count;
 })

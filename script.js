@@ -3,7 +3,7 @@ let count = 1;
 const h1 = document.getElementById("h1");
 const circles = document.getElementsByClassName('circle'); 
 const next = document.getElementById("next");
-const previous = document.getElementById("previous");
+const previous = document.getElementById("prev");
 
 next.addEventListener("click",(e)=>{
 	count++;
